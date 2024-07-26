@@ -1,5 +1,8 @@
 # Bendzae Gstack
 
+> [!CAUTION]
+> Heavy work in progress
+
 ## How do I install these formulae?
 
 `brew install bendzae/gstack/gstack`

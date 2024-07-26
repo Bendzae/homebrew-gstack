@@ -1,4 +1,4 @@
-class GStack < Formula
+class Gstack < Formula
   desc "CLI for utility for stacked branches and pullrequests written in Rust"
   homepage "https://github.com/Bendzae/g-stack"
   url "https://github.com/Bendzae/g-stack/releases/latest/download/g-stack-0.0.1-aarch64-apple-darwin.tar.gz"

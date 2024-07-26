@@ -1,7 +1,7 @@
 # Bendzae Gstack
 
 > [!CAUTION]
-> Heavy work in progress
+> Work in progress
 
 ## How do I install these formulae?
 

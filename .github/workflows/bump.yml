@@ -1,4 +1,7 @@
 - name: Bump packages
+  on:
+    workflow_dispatch:
+
   uses: Homebrew/actions/bump-packages@master
   with:
     # Custom GitHub access token with only the 'public_repo' scope enabled

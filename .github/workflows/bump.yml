@@ -1,10 +1,15 @@
 name: Bump
 
+permissions:
+  contents: write
+  pull-requests: write
+
 on:
   workflow_dispatch:
 
 jobs:
-  - name: Bump packages
+  update:
+    name: Bump packages
     uses: Homebrew/actions/bump-packages@master
     with:
       # Custom GitHub access token with only the 'public_repo' scope enabled

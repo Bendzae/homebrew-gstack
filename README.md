@@ -2,15 +2,15 @@
 
 ## How do I install these formulae?
 
-`brew install bendzae/gstack/<formula>`
+`brew install bendzae/gstack/gstack`
 
-Or `brew tap bendzae/gstack` and then `brew install <formula>`.
+Or `brew tap bendzae/gstack` and then `brew install gstack`.
 
 Or, in a [`brew bundle`](https://github.com/Homebrew/homebrew-bundle) `Brewfile`:
 
 ```ruby
 tap "bendzae/gstack"
-brew "<formula>"
+brew "gstack"
 ```
 
 ## Documentation

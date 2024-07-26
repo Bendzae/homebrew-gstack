@@ -1,16 +1,31 @@
-name: Bump
-
-permissions:
-  contents: write
-  pull-requests: write
+name: Bump formulae
 
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
-  update:
-    name: Bump packages
-    uses: Homebrew/actions/bump-packages@master
-    with:
-      # Custom GitHub access token with only the 'public_repo' scope enabled
-      token: ${{secrets.TOKEN}}
+  autobump:
+    runs-on: ubuntu-22.04
+    container:
+      image: ghcr.io/homebrew/ubuntu22.04:master
+    steps:
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+        with:
+          test-bot: false
+
+      - name: Configure Git user
+        uses: Homebrew/actions/git-user-config@master
+        with:
+          username: ${{ (github.event_name == 'workflow_dispatch' && github.actor) || 'BrewTestBot' }}
+
+      - name: Bump formulae
+        uses: Homebrew/actions/bump-packages@master
+        continue-on-error: true
+        with:
+          token: ${{ secrets.TOKEN }}
+          formulae: gstack

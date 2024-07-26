@@ -6,7 +6,7 @@ class Gstack < Formula
   desc "Cli util to simplify creating stacked branches and pull requests on github"
   homepage "https://github.com/Bendzae/g-stack"
   url "https://github.com/Bendzae/g-stack/archive/refs/tags/0.0.2.tar.gz"
-  sha256 "fae8b696397245d98d8dbb2ca434912f71d17bddcf18a0b00e1b243f8d64d785"
+  sha256 "e9c20925e90391c9ec837d813fc7512343ca390d1591051a860ca9232f0bd15a"
   license "MIT"
 
   def install

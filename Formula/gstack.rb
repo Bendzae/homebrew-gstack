@@ -12,7 +12,7 @@ class Gstack < Formula
   depends_on "rust" => :build
 
   def install
-    system "cargo", "build", "--release", "--bin", "gstack"
+    system "cargo", "install", *std_cargo_args
     bin.install "target/release/gstack"
   end
 end

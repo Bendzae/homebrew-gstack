@@ -13,6 +13,6 @@ class Gstack < Formula
 
   def install
     system "cargo", "install", *std_cargo_args
-    bin.install "target/release/gstack"
+    bin.install "target/release/gstack" => "gs"
   end
 end

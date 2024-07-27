@@ -9,10 +9,10 @@ class Gstack < Formula
   sha256 "1b05f5dd0f9c93d613cc1ca585356f76d69a2bbeb7706633c7aff8f1c31df75d"
   license "MIT"
 
-  on_macos do
-  end
+  depends_on "rust" => :build
 
   def install
-    bin.install "gstack" => "gs"
+    system "cargo", "build", "--release", "--bin", "gstack"
+bin.install "target/release/gstack"
   end
 end

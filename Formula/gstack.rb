@@ -13,6 +13,6 @@ class Gstack < Formula
 
   def install
     system "cargo", "build", "--release", "--bin", "gstack"
-bin.install "target/release/gstack"
+    bin.install "target/release/gstack"
   end
 end

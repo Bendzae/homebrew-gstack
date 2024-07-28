@@ -5,14 +5,30 @@
 class Gstack < Formula
   desc "Cli util to simplify creating stacked branches and pull requests on github"
   homepage "https://github.com/Bendzae/gstack"
-  url "https://github.com/Bendzae/gstack/archive/refs/tags/0.0.2.tar.gz"
-  sha256 "1b05f5dd0f9c93d613cc1ca585356f76d69a2bbeb7706633c7aff8f1c31df75d"
+  url "https://github.com/Bendzae/gstack/archive/refs/tags/0.0.3.tar.gz"
+  sha256 "616a215c7db12179825ffce16e8e9cc09cc673544adae4304490ba2a314a8009"
   license "MIT"
 
-  depends_on "rust" => :build
+  on_macos do
+    on_intel do
+      url "https://github.com/Bendzae/gstack/releases/download/0.0.3/gstack-0.0.3-darwin-amd64.tar.gz"
+      sha256 "658c4d241fb9adf40b80ce242b4d691712900a563072adb37bb4a4d1b3ac3000"
+    end
+
+    on_arm do
+      url "https://github.com/Bendzae/gstack/releases/download/0.0.3/gstack-0.0.3-darwin-arm64.tar.gz"
+      sha256 "2ad599e392473d9e1db8d7e714f251745fb9b98fe01967c3d5d696a747d30dcd"
+    end
+  end
+
+  on_linux do
+    on_intel do
+      url "https://github.com/Bendzae/gstack/releases/download/0.0.3/gstack-0.0.3-linux-amd64.tar.gz"
+      sha256 "09ee36cea6c2eb5f2ef752b97dc66a33d8eb13d785f83f275d65bbe893246b69"
+    end
+  end
 
   def install
-    system "cargo", "install", *std_cargo_args
-    bin.install "target/release/gstack" => "gs"
+    bin.install "gstack" => "gs"
   end
 end

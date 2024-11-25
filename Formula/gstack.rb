@@ -5,26 +5,26 @@
 class Gstack < Formula
   desc "Cli util to simplify creating stacked branches and pull requests on github"
   homepage "https://github.com/Bendzae/gstack"
-  url "https://github.com/Bendzae/gstack/archive/refs/tags/0.0.3.tar.gz"
-  sha256 "616a215c7db12179825ffce16e8e9cc09cc673544adae4304490ba2a314a8009"
+  url "https://github.com/Bendzae/gstack/archive/refs/tags/0.0.4.tar.gz"
+  sha256 "09f4278a3ad5b9f844f92df8b2ad838c932bd7c58ed80f025c975ccb83b4e69f"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/Bendzae/gstack/releases/download/0.0.3/gstack-0.0.3-darwin-amd64.tar.gz"
-      sha256 "658c4d241fb9adf40b80ce242b4d691712900a563072adb37bb4a4d1b3ac3000"
+      url "https://github.com/Bendzae/gstack/releases/download/0.0.4/gstack-0.0.4-darwin-amd64.tar.gz"
+      sha256 "56684b965467a86b5d93bac04f26a01d21916e8ca5ba66428e160bd172f2658c"
     end
 
     on_arm do
-      url "https://github.com/Bendzae/gstack/releases/download/0.0.3/gstack-0.0.3-darwin-arm64.tar.gz"
-      sha256 "2ad599e392473d9e1db8d7e714f251745fb9b98fe01967c3d5d696a747d30dcd"
+      url "https://github.com/Bendzae/gstack/releases/download/0.0.4/gstack-0.0.4-darwin-arm64.tar.gz"
+      sha256 "c0cb1764159fc525c13813b3aa511bd2ec5d90dfcfa9a2fb18abf27cd71ecbe1"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/Bendzae/gstack/releases/download/0.0.3/gstack-0.0.3-linux-amd64.tar.gz"
-      sha256 "09ee36cea6c2eb5f2ef752b97dc66a33d8eb13d785f83f275d65bbe893246b69"
+      url "https://github.com/Bendzae/gstack/releases/download/0.0.4/gstack-0.0.4-linux-amd64.tar.gz"
+      sha256 "3d1cefca2ab29152cc45a557ed5c48ddbf4758241f555eb112e2c3d81c7f3b90"
     end
   end
 
